@@ -11,9 +11,8 @@ const CORS_ORIGIN = process.env.CORS_ORIGIN || "http://localhost:5173";
 app.use(express.json());
 
 app.use(cors({
-  origin: [CORS_ORIGIN,
-  'https://a20-despliegue-full-stack.vercel.app/'
-]}));
+  origin: CORS_ORIGIN
+}));
 
 let nextId = 3;
 let items = [
